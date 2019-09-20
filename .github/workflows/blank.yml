@@ -20,6 +20,7 @@ jobs:
         cp /tmp/output.pdf .
         git config --global user.email "actions@github.com"
         git config --global user.name "Actions CI"
+        git status
         git add .
         git commit -m 'Deploy'
         git push --force https://github.com/larshp/actions-abap-size-graph-example master:pdf
