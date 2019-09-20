@@ -14,11 +14,8 @@ jobs:
     - name: push
       run: |
         cp output.pdf /tmp
-        rm -rf *
-        cp /tmp/output.pdf .
-        ls
-        pwd
         git checkout pdf
+        cp /tmp/output.pdf .
         git config --global user.email "actions@github.com"
         git config --global user.name "Actions CI"
         git add .
