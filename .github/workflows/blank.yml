@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build_pdf
-      uses: larshp/actions-abap-size-graph@master    
+      uses: larshp/actions-abap-size-graph@wip
     - name: Run a one-line script
       run: echo Hello, world!
