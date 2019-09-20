@@ -13,7 +13,6 @@ jobs:
       uses: larshp/actions-abap-size-graph@wip
     - name: push
       run: |
-        ls $GITHUB_WORKSPACE
         cp output.pdf /tmp
         rm -rf *.*
         cp /tmp/output.pdf .
