@@ -11,5 +11,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: build_pdf
       uses: larshp/actions-abap-size-graph@wip
-    - name: Run a one-line script
-      run: ls $GITHUB_WORKSPACE
+    - name: push
+      run: |
+        ls $GITHUB_WORKSPACE
+        cp output.pdf /
+        rm -rf *.*
+        cp /output.pdf .
+        ls
+        pwd
