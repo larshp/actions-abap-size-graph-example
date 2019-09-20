@@ -14,8 +14,8 @@ jobs:
     - name: push
       run: |
         ls $GITHUB_WORKSPACE
-        cp output.pdf /
+        cp output.pdf /tmp
         rm -rf *.*
-        cp /output.pdf .
+        cp /tmp/output.pdf .
         ls
         pwd
