@@ -12,4 +12,4 @@ jobs:
     - name: build_pdf
       uses: larshp/actions-abap-size-graph@wip
     - name: Run a one-line script
-      run: ls /github/home
+      run: ls $HOME
