@@ -18,7 +18,7 @@ jobs:
         cp /tmp/output.pdf .
         ls
         pwd
-        git init
+        git checkout pdf
         git config --global user.email "actions@github.com"
         git config --global user.name "Actions CI"
         git add .
