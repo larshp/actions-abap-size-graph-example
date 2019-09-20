@@ -14,7 +14,7 @@ jobs:
     - name: push
       run: |
         cp output.pdf /tmp
-        rm -rf *.*
+        rm -rf *
         cp /tmp/output.pdf .
         ls
         pwd
