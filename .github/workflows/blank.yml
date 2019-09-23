@@ -23,4 +23,4 @@ jobs:
         git status
         git add .
         git commit -m 'Deploy'
-        git push --force https://github.com/larshp/actions-abap-size-graph-example master:pdf
+        git push https://github.com/larshp/actions-abap-size-graph-example
