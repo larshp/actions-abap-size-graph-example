@@ -14,6 +14,7 @@ jobs:
     - name: push
       run: |
         cp output.pdf /tmp
+        rm output.pdf
         git checkout pdf
         ls
         pwd
