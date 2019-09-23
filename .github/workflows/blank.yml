@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build_pdf
-      uses: larshp/actions-abap-size-graph@wip
+      uses: larshp/actions-abap-size-graph@master
     - name: push
       if: github.ref == 'refs/heads/master' && github.repository == 'larshp/actions-abap-size-graph-example'
       env:
