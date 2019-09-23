@@ -23,6 +23,7 @@ jobs:
         git status
         git add .
         git commit -m 'Deploy'
-        git push
+        header=$(echo -n "ad-m:${GITHUB_TOKEN}" | base64)
+        git -c http.extraheader="AUTHORIZATION: basic $header" push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
