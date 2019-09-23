@@ -12,6 +12,9 @@ jobs:
     - name: build_pdf
       uses: larshp/actions-abap-size-graph@wip
     - name: push
+      if: github.ref == 'refs/heads/master' && github.repository == 'larshp/actions-abap-size-graph-example'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
       run: |
         cp output.pdf /tmp
         rm output.pdf
@@ -26,5 +29,4 @@ jobs:
         git commit -m 'Deploy'
         header=$(echo -n "ad-m:${GITHUB_TOKEN}" | base64)
         git -c http.extraheader="AUTHORIZATION: basic $header" push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+    
