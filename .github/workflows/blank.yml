@@ -24,3 +24,5 @@ jobs:
         git add .
         git commit -m 'Deploy'
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
